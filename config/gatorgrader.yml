@@ -1,0 +1,47 @@
+---
+name: cs100-01-practical10
+break: true
+indent: 4
+---
+
+# GatorGrader configuration file
+
+# Learn more about GatorGrader and its supported checks by visiting this web site:
+# https://github.com/GatorEducator/gatorgrader
+
+# Explanation:
+# --> a check without an "--exact" runs a count for an entity as an "at least"
+# --> checks below a file in a specified directory are for that specific file and directory
+# --> checks that appear stand-alone are for an entire Git repository
+
+# --> check the source code for various characteristics
+
+src/main:
+    java:
+        practicalten/LoopStyles.java:
+            ConfirmFileExists
+            CountMultipleLineComments --language Java --count 4
+            MatchFileFragment --fragment "TODO" --count 0 --exact
+            MatchFileFragment --fragment "Add Your Name Here" --count 0 --exact
+            MatchFileFragment --fragment "for (" --count 1
+            MatchFileFragment --fragment "do {" --count 1
+		practicalten/ArrayDay.java:
+            ConfirmFileExists
+            CountMultipleLineComments --language Java --count 2
+            MatchFileFragment --fragment "TODO" --count 0 --exact
+            MatchFileFragment --fragment "Add Your Name Here" --count 0 --exact
+            MatchFileFragment --fragment "[]" --count 2
+            MatchFileFragment --fragment "= new" --count 3
+            MatchFileFragment --fragment "for (" --count 1
+        practicalten/CallingMethodsInSameClass.java:
+            ConfirmFileExists
+            CountMultipleLineComments --language Java --count 5
+            MatchFileFragment --fragment "TODO" --count 0 --exact
+            MatchFileFragment --fragment "Add Your Name Here" --count 0 --exact
+            MatchFileFragment --fragment "public static void printThree()" --count 1
+# --> check that the number of commits in the Git repository is beyond a threshold
+CountCommits --count 3
+
+# --> check that the program executes correctly
+ExecuteCommand --command "gradle build"
+ExecuteCommand --command "gradle -q --console plain run"
