@@ -1,4 +1,4 @@
-package practicaleleven;
+package practicalten;
 
 /** Program demonstrating usage of the do while and for loops with an array.
 *

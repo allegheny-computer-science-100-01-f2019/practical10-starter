@@ -1,16 +1,16 @@
-package practicaleleven;
+package practicalten;
 
 /** Program illustrates how to call static methods a class
 * from a method in the same class. Static methods are the methods
 * that can be called without creating an instance of the object.
 *
-* <p>Bugs: This program has bugs and is missing source code.
+* <p>Bugs: This program is missing source code.
 *
 * @author Add Your Name Here
 */
 public class CallingMethodsInSameClass {
 
-  public static void main(String args) {
+  public static void main(String[] args) {
     printOne();
     printOne();
     printTwo();
