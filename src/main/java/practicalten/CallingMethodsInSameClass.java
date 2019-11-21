@@ -1,4 +1,4 @@
-package practicalten;
+package practicaleleven;
 
 /** Program illustrates how to call static methods a class
 * from a method in the same class. Static methods are the methods
